@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Portal - Apply</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Apply for a Job</h2>
+        <form id="applyForm">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+
+            <label for="coverletter">Cover Letter:</label>
+            <textarea id="coverletter" rows="5" required></textarea>
+
+            <button type="submit">Submit Application</button>
+            <p id="successMsg" class="success"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('applyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('successMsg').textContent = "Application submitted successfully!";
+        });
+    </script>
+</body>
+</html>
